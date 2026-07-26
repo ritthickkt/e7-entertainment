@@ -2,23 +2,25 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1c1c1c;
+  --foreground: #3d4c5e;
 
-  /* Ink scale */
-  --ink: #1c1c1c;
-  --ink-soft: #3b3b3b;
-  --muted: #6b6b6b;
+  /* Navy scale — our "black" everywhere; never pure #000 */
+  --ink: #1f3864;
+  --ink-soft: #3d4c5e;
+  --muted: #64748b;
 
   /* Neutral grounds */
-  --sand: #f7f7f7;
-  --sand-deep: #f2f2f2;
-  --line: #e6e6e6;
+  --sand: #f4f7fb;
+  --sand-deep: #e8eef7;
+  --line: #e1e8f0;
 
-  /* Champagne accent */
-  --gold: #bea175;
-  --gold-dark: #ae8952;
-  /* Deeper tone for gold *text* on white — the champagne fill is too light to read at small sizes */
-  --gold-ink: #8a6a3b;
+  /* Rich gold accent */
+  --gold: #f0a821;
+  --gold-hover: #ffc14d;
+  --gold-ink: #f0a821;
+
+  /* Tiny-accent only — dots, hover details, never large fills */
+  --coral: #ff6b6b;
 }
 
 @theme inline {
@@ -31,8 +33,9 @@
   --color-sand-deep: var(--sand-deep);
   --color-line: var(--line);
   --color-gold: var(--gold);
-  --color-gold-dark: var(--gold-dark);
+  --color-gold-hover: var(--gold-hover);
   --color-gold-ink: var(--gold-ink);
+  --color-coral: var(--coral);
   --font-sans: var(--font-open-sans);
   --font-display: var(--font-montserrat);
 }
@@ -56,6 +59,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display), var(--font-sans), sans-serif;
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -67,11 +71,11 @@ h6 {
 /* Small caps eyebrow label above section headings */
 .eyebrow {
   font-family: var(--font-display), sans-serif;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.28em;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gold-ink);
+  color: var(--gold);
 }
 
 /* Square, uppercase CTA — Miral keeps corners sharp throughout */
@@ -93,11 +97,12 @@ h6 {
 
 .btn-solid {
   background-color: var(--gold);
-  color: #ffffff;
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .btn-solid:hover {
-  background-color: var(--ink);
+  background-color: var(--gold-hover);
 }
 
 .btn-outline {
@@ -124,8 +129,8 @@ h6 {
 .rule-gold::after {
   content: "";
   display: block;
-  width: 3.5rem;
-  height: 2px;
+  width: 3.75rem;
+  height: 3px;
   margin-top: 1.5rem;
   background-color: var(--gold);
 }

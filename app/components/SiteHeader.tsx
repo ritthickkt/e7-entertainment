@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
-  { href: "/#opportunities", label: "What We Do" },
+  { href: "/#opportunities", label: "Services" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -11,7 +11,7 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center bg-gold font-display text-sm font-bold text-white">
+          <span className="flex h-10 w-10 items-center justify-center bg-ink font-display text-sm font-bold text-white">
             E7
           </span>
           <span className="font-display text-base font-semibold uppercase tracking-[0.16em] text-ink">
@@ -25,7 +25,7 @@ export function SiteHeader() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-ink-soft transition-colors hover:text-gold-ink"
+                  className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:text-gold"
                 >
                   {link.label}
                 </Link>

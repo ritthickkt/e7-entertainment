@@ -24,7 +24,7 @@ const offices = [
 
 const quickLinks = [
   { href: "/about", label: "About Us" },
-  { href: "/#opportunities", label: "What We Do" },
+  { href: "/#opportunities", label: "Services" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -36,7 +36,7 @@ export function SiteFooter() {
           {/* Brand + quick links */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center bg-gold font-display text-sm font-bold text-white">
+              <span className="flex h-10 w-10 items-center justify-center bg-white font-display text-sm font-bold text-ink">
                 E7
               </span>
               <span className="font-display text-base font-semibold uppercase tracking-[0.16em]">

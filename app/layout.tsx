@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { montserrat, openSans } from "./fonts";
+import { WhatsAppButton } from "./components/WhatsAppButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${openSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

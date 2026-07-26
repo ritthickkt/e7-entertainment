@@ -71,16 +71,24 @@ const opportunities = [
 
 const inMotion = [
   {
-    title: "Rides & Attractions",
-    video: "/videos/roller-coaster.mp4",
+    title: "Amusement Parks & Game Zones",
+    video: "/videos/amusement-gamezone.mp4",
   },
   {
-    title: "Parks After Dark",
-    video: "/videos/ferris-wheel-night.mp4",
+    title: "Lighting, Festivals & Parties",
+    video: "/videos/festival-lighting.mp4",
   },
   {
-    title: "Events & Lighting",
-    video: "/videos/stage-lighting.mp4",
+    title: "Sports, Tents & Outdoor",
+    video: "/videos/sports-outdoor.mp4",
+  },
+  {
+    title: "Food & Beverage",
+    video: "/videos/food-beverage.mp4",
+  },
+  {
+    title: "Cinema, Events & Culture",
+    video: "/videos/cinema-culture.mp4",
   },
 ];
 
@@ -121,9 +129,9 @@ export default function Home() {
             poster="/images/hero-ferris-wheel.jpg"
             className="h-full w-full object-cover"
           >
-            <source src="/videos/hero-amusement-park.mp4" type="video/mp4" />
+            <source src="/videos/hero-joy.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-ink/55" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
 
         <motion.div
@@ -132,31 +140,26 @@ export default function Home() {
           animate="show"
           className="relative mx-auto w-full max-w-7xl px-6 py-24 lg:px-10"
         >
-          <motion.span
-            variants={item}
-            className="block font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold"
-          >
-            Now Building Founding Partnerships
-          </motion.span>
           <motion.h1
             variants={item}
-            className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
+            className="max-w-4xl text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            We build your dreams.
+            We Build Your Dream
           </motion.h1>
           <motion.p
             variants={item}
             className="mt-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
           >
-            Amusement parks, game zones, events, lighting and entertainment
-            trade — delivered across Asia, Africa, the Middle East and Europe.
+            Parks &amp; game zones · Lights, festivals &amp; parties · Sports
+            &amp; outdoor · Food &amp; beverage · Cinema, OTT &amp; cultural
+            events — joy delivered worldwide.
           </motion.p>
           <motion.div variants={item} className="mt-12 flex flex-wrap gap-4">
             <Link href="/contact" className="btn btn-solid">
               Start Your Project
             </Link>
-            <Link href="/about" className="btn btn-ghost-light">
-              About Us
+            <Link href="/contact" className="btn btn-ghost-light">
+              Become a Partner
             </Link>
           </motion.div>
         </motion.div>
@@ -173,22 +176,16 @@ export default function Home() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-ink-soft">
             <p>
-              E7 Entertainments is the entertainment, leisure and lifestyle
-              venture of an established multinational business group, backed by
-              E7Tex Limited (Hong Kong), with group companies and partner
-              networks operating internationally.
+              E7 Entertainments is the leisure and lifestyle venture of an
+              established <strong className="font-bold text-ink">multinational business group</strong>,
+              backed by <strong className="font-bold text-ink">E7Tex Limited (Hong Kong)</strong>, with
+              group companies and partner networks operating internationally.
             </p>
             <p>
-              From concept to grand opening — manufacturing, quality
-              inspection, shipping, documentation and safe payments. We own
-              every step, so you enjoy every result.
+              From concept to <strong className="font-bold text-ink">grand opening</strong> —
+              manufacturing, quality inspection, shipping, documentation and
+              safe payments. We own every step, so you enjoy every result.
             </p>
-            <Link
-              href="/about"
-              className="inline-block font-display text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink underline decoration-gold decoration-1 underline-offset-8 transition-colors hover:text-ink"
-            >
-              Discover our story
-            </Link>
           </div>
         </Reveal>
       </section>
@@ -244,7 +241,7 @@ export default function Home() {
           </h2>
         </Reveal>
 
-        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-3">
+        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {inMotion.map((clip) => (
             <StaggerItem
               key={clip.title}

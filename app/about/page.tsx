@@ -106,31 +106,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Intro */}
-      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
-        <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          <div>
-            <p className="eyebrow">Our Story</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-              Built on two decades of international delivery
-            </h2>
-          </div>
-          <div className="space-y-6 text-base leading-relaxed text-ink-soft">
-            <p>
-              E7 Entertainments is the entertainment, leisure and lifestyle
-              venture of an established multinational business group — backed
-              by E7Tex Limited (Hong Kong), with group companies and partner
-              networks operating internationally.
-            </p>
-            <p>
-              From concept to grand opening — manufacturing, quality
-              inspection, shipping, documentation and safe payments. We own
-              every step, so you enjoy every result.
-            </p>
-          </div>
-        </Reveal>
-      </section>
-
       {/* Services */}
       <section className="bg-sand py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">

@@ -54,7 +54,7 @@ export default function Contact() {
               </p>
               <a
                 href="mailto:partners@e7entertainments.com"
-                className="mt-3 inline-block font-display text-lg font-semibold tracking-tight text-ink transition-colors hover:text-gold-ink"
+                className="mt-3 inline-block font-display text-lg font-semibold tracking-tight text-gold transition-colors hover:text-ink"
               >
                 partners@e7entertainments.com
               </a>
