@@ -32,40 +32,34 @@ const buzzwords = [
 
 const opportunities = [
   {
-    title: "Parks & Attractions",
+    title: "Amusement & Dinosaur Parks, Game Zones",
     description:
-      "Theme parks, water parks, adventure and immersive attraction concepts built for the next generation of visitors.",
+      "Theme parks, water parks, dino and adventure attractions, arcades and VR zones — turnkey concepts built for the next generation of visitors.",
     image: "/images/water-park.jpg",
   },
   {
-    title: "Gaming & Family Entertainment",
+    title: "Lighting, Festival, Party & Seasonal Products",
     description:
-      "Arcades, VR zones, esports lounges and family entertainment centres designed to keep people coming back.",
-    image: "/images/arcade-neon.jpg",
-  },
-  {
-    title: "Cinema & Live Events",
-    description:
-      "Cinema experiences, stage shows, concerts and festival productions that turn moments into memories.",
-    image: "/images/festival-crowd.jpg",
-  },
-  {
-    title: "Seasonal & Lifestyle Trade",
-    description:
-      "Festive, celebration and lifestyle products moving at scale across fast-growing markets.",
+      "Decorative, stage and festival lighting plus seasonal and celebration products — moving at scale across fast-growing markets.",
     image: "/images/festive-lights.jpg",
   },
   {
-    title: "Government & Institutional Projects",
+    title: "Sports, Tents & Outdoor",
     description:
-      "Public leisure infrastructure, tourism development and large-scale institutional partnerships.",
-    image: "/images/cultural-dance.jpg",
+      "Playground, fitness, camping and glamping gear, and event tents — built for active, outdoor experiences.",
+    image: "/images/camping-tents.jpg",
   },
   {
-    title: "What's Next",
+    title: "Food & Beverage Setups",
     description:
-      "New formats, new markets, new categories — built together with the partners who join us early.",
-    image: "/images/container-cafe.jpg",
+      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés.",
+    image: "/images/food-kiosk.jpg",
+  },
+  {
+    title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
+    description:
+      "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets.",
+    image: "/images/festival-crowd.jpg",
   },
 ];
 

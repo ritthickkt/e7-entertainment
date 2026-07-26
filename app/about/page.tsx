@@ -12,33 +12,15 @@ export const metadata = {
 
 const services = [
   {
-    title: "Amusement & Water Parks",
+    title: "Amusement & Dinosaur Parks, Game Zones",
     description:
-      "Complete park projects — rides, slides, dino animatronics, snow and adventure parks, illumination parks, science parks and edutainment centres. From one acre to full destinations.",
+      "Complete park projects — rides, slides, dino animatronics, snow and adventure parks, illumination parks, science parks and edutainment centres — plus arcade games, VR zones, 5D/7D theatres, trampoline parks and soft play. From one acre to full destinations, and turnkey setups for malls and resorts.",
     image: "/images/water-park.jpg",
   },
   {
-    title: "Game Zones & Family Entertainment",
+    title: "Lighting, Festival, Party & Seasonal Products",
     description:
-      "Arcade games, VR zones, 5D/7D theatres, trampoline parks, soft play — turnkey setups for malls and resorts.",
-    image: "/images/vr-headset.jpg",
-  },
-  {
-    title: "Cinema, Events & Media",
-    description:
-      "Cinema seating and projection, stage, sound and LED walls, event equipment and studio & production gear — for every celebration and creation.",
-    image: "/images/cinema-seats.jpg",
-  },
-  {
-    title: "Lighting — All Kinds",
-    description:
-      "Festival, decorative, stage, landscape, street and solar lighting, signage and LED displays.",
-    image: "/images/stage-lighting.jpg",
-  },
-  {
-    title: "Festival, Party & Seasonal Products",
-    description:
-      "Christmas, Diwali and celebration products at factory volume — décor, lights, gifts, party and wedding supplies, toys and inflatables.",
+      "Festival, decorative, stage, landscape, street and solar lighting, signage and LED displays — plus Christmas, Diwali and celebration products at factory volume: décor, lights, gifts, party and wedding supplies, toys and inflatables.",
     image: "/images/festive-lights.jpg",
   },
   {
@@ -54,28 +36,10 @@ const services = [
     image: "/images/food-kiosk.jpg",
   },
   {
-    title: "Container & Prefab Structures",
+    title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
     description:
-      "Container cafés and shops, glamping pods, site offices, ticket counters and portable buildings.",
-    image: "/images/container-cafe.jpg",
-  },
-  {
-    title: "Movies, Content & OTT",
-    description:
-      "Cross-border film distribution, content licensing, dubbing and subtitling, co-productions — taking great stories from one market to the world.",
-    image: "/images/film-camera.jpg",
-  },
-  {
-    title: "Cultural Exchange Programs",
-    description:
-      "International cultural events, art and music exchanges, festivals and student programs — building bridges between nations through culture.",
-    image: "/images/cultural-dance.jpg",
-  },
-  {
-    title: "IT, AI & Digital Solutions",
-    description:
-      "Software development, AI-powered platforms, park ticketing and management systems, e-commerce and enterprise solutions — delivered with our global technology partners.",
-    image: "/images/coding-screen.jpg",
+      "Cinema seating and projection, stage, sound and LED walls, event equipment and studio & production gear for every celebration and creation — cross-border film distribution, content licensing, dubbing and subtitling, co-productions — plus international cultural events, art and music exchanges, festivals and student programs building bridges between nations through culture.",
+    image: "/images/cinema-seats.jpg",
   },
 ];
 
