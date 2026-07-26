@@ -69,6 +69,21 @@ const opportunities = [
   },
 ];
 
+const inMotion = [
+  {
+    title: "Rides & Attractions",
+    video: "/videos/roller-coaster.mp4",
+  },
+  {
+    title: "Parks After Dark",
+    video: "/videos/ferris-wheel-night.mp4",
+  },
+  {
+    title: "Events & Lighting",
+    video: "/videos/stage-lighting.mp4",
+  },
+];
+
 const process = [
   {
     step: "01",
@@ -98,13 +113,16 @@ export default function Home() {
       {/* Hero — full-bleed banner image with overlaid title */}
       <section className="relative flex min-h-[85vh] items-center overflow-hidden pt-24">
         <div className="pointer-events-none absolute inset-0">
-          <Image
-            src="/images/hero-ferris-wheel.jpg"
-            alt=""
-            fill
-            priority
-            className="object-cover"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/hero-ferris-wheel.jpg"
+            className="h-full w-full object-cover"
+          >
+            <source src="/videos/hero-amusement-park.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-ink/55" />
         </div>
 
@@ -216,6 +234,39 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      {/* In Motion */}
+      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+        <Reveal className="max-w-2xl">
+          <p className="eyebrow">Experience It</p>
+          <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+            Our world, in motion
+          </h2>
+        </Reveal>
+
+        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-3">
+          {inMotion.map((clip) => (
+            <StaggerItem
+              key={clip.title}
+              className="group relative h-72 overflow-hidden bg-ink"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              >
+                <source src={clip.video} type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
+              <p className="absolute bottom-6 left-6 font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                {clip.title}
+              </p>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </section>
 
       {/* Opportunities */}
       <section id="opportunities" className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
