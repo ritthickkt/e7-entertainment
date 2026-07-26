@@ -1,33 +1,14 @@
-import localFont from "next/font/local";
+import { Montserrat, Open_Sans } from "next/font/google";
 
-export const generalSans = localFont({
-  src: [
-    {
-      path: "./fonts/general-sans/GeneralSans-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/general-sans/GeneralSans-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./fonts/general-sans/GeneralSans-Medium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/general-sans/GeneralSans-Semibold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/general-sans/GeneralSans-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-general-sans",
+// Montserrat for headings, Open Sans for body — both variable, so no weight list needed.
+export const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
   display: "swap",
 });

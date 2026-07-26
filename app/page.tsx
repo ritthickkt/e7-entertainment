@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { Reveal, StaggerGroup, StaggerItem } from "./components/Reveal";
+import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 
 const container: Variants = {
@@ -86,181 +87,166 @@ const process = [
 ];
 
 export default function Home() {
-  const reduce = useReducedMotion();
-
   return (
-    <div className="flex flex-1 flex-col bg-navy text-white">
-      {/* Header */}
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/70 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-sm font-bold text-navy-deep">
-              E7
-            </span>
-            <span className="text-lg font-semibold tracking-tight">
-              E7 Entertainments
-            </span>
-          </div>
-          <div className="flex items-center gap-6">
-            <Link
-              href="/about"
-              className="hidden text-sm font-medium text-zinc-300 transition-colors hover:text-white sm:inline-block"
-            >
-              About
-            </Link>
-            <a
-              href="mailto:partners@e7entertainments.com"
-              className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-navy-deep transition-all duration-200 hover:scale-105 active:scale-95"
-            >
-              Become a Partner
-            </a>
-          </div>
-        </div>
-      </header>
+    <div className="flex flex-1 flex-col bg-white text-ink">
+      <SiteHeader />
 
-      {/* Hero */}
-      <section className="relative flex items-center overflow-hidden pt-32 pb-20">
+      {/* Hero — full-bleed banner image with overlaid title */}
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden pt-24">
         <div className="pointer-events-none absolute inset-0">
           <Image
             src="/images/hero-ferris-wheel.jpg"
             alt=""
             fill
             priority
-            className="object-cover opacity-30"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/80 to-navy" />
-          <motion.div
-            className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-gold/20 blur-3xl"
-            animate={
-              reduce
-                ? undefined
-                : { x: [0, 40, 0], y: [0, 30, 0], scale: [1, 1.1, 1] }
-            }
-            transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute right-0 top-10 h-[28rem] w-[28rem] rounded-full bg-gold/10 blur-3xl"
-            animate={
-              reduce
-                ? undefined
-                : { x: [0, -30, 0], y: [0, 40, 0], scale: [1, 1.15, 1] }
-            }
-            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="absolute inset-0 bg-ink/55" />
         </div>
 
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="relative mx-auto max-w-4xl px-6 text-center"
+          className="relative mx-auto w-full max-w-7xl px-6 py-24 lg:px-10"
         >
           <motion.span
             variants={item}
-            className="inline-block rounded-full border border-gold/40 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-gold"
+            className="block font-display text-[0.6875rem] font-semibold uppercase tracking-[0.28em] text-gold"
           >
             Now Building Founding Partnerships
           </motion.span>
           <motion.h1
             variants={item}
-            className="mx-auto mt-6 max-w-3xl text-5xl font-bold leading-tight tracking-tight sm:text-7xl"
+            className="mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
           >
-            We build <span className="text-gold">your dreams</span>.
+            We build your dreams.
           </motion.h1>
           <motion.p
             variants={item}
-            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-zinc-300"
+            className="mt-8 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg"
           >
             Amusement parks, game zones, events, lighting and entertainment
-            trade — delivered across Asia, Africa, the Middle East and
-            Europe.
+            trade — delivered across Asia, Africa, the Middle East and Europe.
           </motion.p>
-          <motion.div
-            variants={item}
-            className="mt-10 flex flex-wrap items-center justify-center gap-4"
-          >
-            <Link
-              href="/contact"
-              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-navy-deep transition-all duration-200 hover:scale-105 active:scale-95"
-            >
+          <motion.div variants={item} className="mt-12 flex flex-wrap gap-4">
+            <Link href="/contact" className="btn btn-solid">
               Start Your Project
+            </Link>
+            <Link href="/about" className="btn btn-ghost-light">
+              About Us
             </Link>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* Founder's Message */}
-      <section className="border-y border-white/10 bg-white/[0.02] py-24">
-        <Reveal className="mx-auto max-w-3xl px-6">
-          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-            <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gold text-2xl font-bold text-navy-deep">
-              M
-            </span>
-            <div>
-              <p className="font-serif text-xl italic leading-relaxed text-zinc-200 sm:text-2xl">
-                &ldquo;Every great destination begins with one person&apos;s
-                dream. For over two decades, I have built international
-                businesses and delivered world-class projects across the
-                globe. E7 Entertainments stands on one simple belief: joy is
-                the world&apos;s greatest business. If you carry a dream, we
-                will build it together.&rdquo;
-              </p>
-              <p className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-                — Manimaran, Founder &amp; Chairman, E7 Entertainments Group
-              </p>
-            </div>
+      {/* Intro statement */}
+      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+        <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="eyebrow">Who We Are</p>
+            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              Transforming landscapes, enriching lives
+            </h2>
+          </div>
+          <div className="space-y-6 text-base leading-relaxed text-ink-soft">
+            <p>
+              E7 Entertainments is the entertainment, leisure and lifestyle
+              venture of an established multinational business group, backed by
+              E7Tex Limited (Hong Kong), with group companies and partner
+              networks operating internationally.
+            </p>
+            <p>
+              From concept to grand opening — manufacturing, quality
+              inspection, shipping, documentation and safe payments. We own
+              every step, so you enjoy every result.
+            </p>
+            <Link
+              href="/about"
+              className="inline-block font-display text-xs font-semibold uppercase tracking-[0.18em] text-gold-ink underline decoration-gold decoration-1 underline-offset-8 transition-colors hover:text-ink"
+            >
+              Discover our story
+            </Link>
           </div>
         </Reveal>
       </section>
 
+      {/* Founder's Message */}
+      <section className="bg-sand py-28">
+        <Reveal className="mx-auto max-w-4xl px-6 text-center lg:px-10">
+          <p className="eyebrow">Chairman&apos;s Message</p>
+          <blockquote className="mt-8">
+            <p className="font-display text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
+              &ldquo;Every great destination begins with one person&apos;s
+              dream. For over two decades, I have built international
+              businesses and delivered world-class projects across the globe.
+              E7 Entertainments stands on one simple belief: joy is the
+              world&apos;s greatest business. If you carry a dream, we will
+              build it together.&rdquo;
+            </p>
+            <footer className="mt-10 flex flex-col items-center gap-4">
+              <span className="flex h-16 w-16 items-center justify-center bg-gold font-display text-xl font-bold text-white">
+                M
+              </span>
+              <div>
+                <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-ink">
+                  Manimaran
+                </p>
+                <p className="mt-1 text-sm text-muted">
+                  Founder &amp; Chairman, E7 Entertainments Group
+                </p>
+              </div>
+            </footer>
+          </blockquote>
+        </Reveal>
+      </section>
+
       {/* Marquee */}
-      <div className="overflow-hidden border-y border-white/10 bg-white/[0.03] py-4">
-        <div className="marquee-track flex w-max gap-10 whitespace-nowrap text-sm font-semibold uppercase tracking-[0.2em] text-gold/70">
+      <div className="overflow-hidden border-y border-line bg-white py-5">
+        <div className="marquee-track flex w-max gap-10 whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.28em] text-muted">
           {[...buzzwords, ...buzzwords].map((word, i) => (
             <span key={i} className="flex items-center gap-10">
               {word}
-              <span className="text-white/20">•</span>
+              <span className="text-gold">•</span>
             </span>
           ))}
         </div>
       </div>
 
       {/* Opportunities */}
-      <section id="opportunities" className="mx-auto max-w-6xl px-6 py-24">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-            Where we&apos;re building
-          </p>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+      <section id="opportunities" className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+        <Reveal className="max-w-2xl">
+          <p className="eyebrow">Where We&apos;re Building</p>
+          <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             A portfolio of opportunities, one partnership away
           </h2>
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-8 text-base leading-relaxed text-ink-soft">
             We bring the sourcing, execution and delivery network. You bring
             the land, the market, or the vision. Together, we build.
           </p>
         </Reveal>
 
-        <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-16 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
           {opportunities.map((opportunity) => (
             <StaggerItem
               key={opportunity.title}
-              className="h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-gold/30"
+              className="group h-full bg-white transition-colors hover:bg-sand"
             >
               {opportunity.image && (
-                <div className="relative h-40 w-full">
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
                     src={opportunity.image}
                     alt={opportunity.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
               )}
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-white">
+              <div className="p-8">
+                <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
                   {opportunity.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                <p className="mt-4 text-sm leading-relaxed text-muted">
                   {opportunity.description}
                 </p>
               </div>
@@ -270,28 +256,28 @@ export default function Home() {
       </section>
 
       {/* Process */}
-      <section className="border-y border-white/10 bg-white/[0.02] py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <Reveal className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold">
-              How it works
-            </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+      <section className="bg-sand py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <Reveal className="max-w-2xl">
+            <p className="eyebrow">How It Works</p>
+            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
               From conversation to launch
             </h2>
           </Reveal>
 
-          <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-3">
+          <StaggerGroup className="mt-16 grid gap-10 sm:grid-cols-3">
             {process.map((step) => (
               <StaggerItem
                 key={step.step}
-                className="rounded-2xl border border-white/10 bg-navy p-6"
+                className="border-t-2 border-gold bg-white p-8"
               >
-                <span className="text-4xl font-bold text-gold/40">
+                <span className="font-display text-4xl font-bold text-gold">
                   {step.step}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold">{step.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                <h3 className="mt-6 font-display text-lg font-semibold uppercase tracking-[0.12em] text-ink">
+                  {step.title}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-muted">
                   {step.description}
                 </p>
               </StaggerItem>
@@ -301,22 +287,25 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-4xl px-6 py-24 text-center">
+      <section className="mx-auto max-w-4xl px-6 py-28 text-center lg:px-10">
         <Reveal>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             Let&apos;s build something people remember.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-zinc-400">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
             If you have land, a market, a network, or just an idea worth
             building — we want to hear from you.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="mailto:partners@e7entertainments.com"
-              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-navy-deep transition-all duration-200 hover:scale-105 active:scale-95"
+              className="btn btn-solid"
             >
-              partners@e7entertainments.com
+              Become a Partner
             </a>
+            <Link href="/contact" className="btn btn-outline">
+              Contact Us
+            </Link>
           </div>
         </Reveal>
       </section>

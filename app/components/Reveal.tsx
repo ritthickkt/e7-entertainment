@@ -73,12 +73,7 @@ export function StaggerItem({
   className?: string;
 }) {
   return (
-    <motion.div
-      variants={itemVariants}
-      whileHover={{ y: -6 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={className}
-    >
+    <motion.div variants={itemVariants} className={className}>
       {children}
     </motion.div>
   );
