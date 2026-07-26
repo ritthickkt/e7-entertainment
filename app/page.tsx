@@ -35,6 +35,7 @@ const opportunities = [
     title: "Parks & Attractions",
     description:
       "Theme parks, water parks, adventure and immersive attraction concepts built for the next generation of visitors.",
+    image: "/images/water-park.jpg",
   },
   {
     title: "Gaming & Family Entertainment",
@@ -52,16 +53,19 @@ const opportunities = [
     title: "Seasonal & Lifestyle Trade",
     description:
       "Festive, celebration and lifestyle products moving at scale across fast-growing markets.",
+    image: "/images/festive-lights.jpg",
   },
   {
     title: "Government & Institutional Projects",
     description:
       "Public leisure infrastructure, tourism development and large-scale institutional partnerships.",
+    image: "/images/cultural-dance.jpg",
   },
   {
     title: "What's Next",
     description:
       "New formats, new markets, new categories — built together with the partners who join us early.",
+    image: "/images/container-cafe.jpg",
   },
 ];
 
