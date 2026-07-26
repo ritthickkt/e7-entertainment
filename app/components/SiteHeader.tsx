@@ -3,7 +3,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/#opportunities", label: "What We Do" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export function SiteHeader() {
