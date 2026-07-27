@@ -181,7 +181,7 @@ export default function Home() {
                 alt="Manimaran, Founder & Chairman, E7 Entertainments Group"
                 width={132}
                 height={132}
-                className="h-16 w-16 rounded-full object-cover"
+                className="h-32 w-32 rounded-full object-cover"
               />
               <div>
                 <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-ink">
