@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const offices = [
@@ -36,8 +37,14 @@ export function SiteFooter() {
           {/* Brand + quick links */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center bg-white font-display text-sm font-bold text-ink">
-                E7
+              <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1.5">
+                <Image
+                  src="/images/logo.png"
+                  alt="E7 Entertainments"
+                  width={48}
+                  height={51}
+                  className="h-full w-auto"
+                />
               </span>
               <span className="font-display text-base font-semibold uppercase tracking-[0.16em]">
                 E7 Entertainments

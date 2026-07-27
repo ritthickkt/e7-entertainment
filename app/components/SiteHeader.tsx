@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -11,9 +12,14 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
         <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center bg-ink font-display text-sm font-bold text-white">
-            E7
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt="E7 Entertainments"
+            width={48}
+            height={51}
+            className="h-12 w-auto"
+            priority
+          />
           <span className="font-display text-base font-semibold uppercase tracking-[0.16em] text-ink">
             E7 Entertainments
           </span>
