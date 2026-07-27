@@ -34,31 +34,31 @@ const opportunities = [
     title: "Amusement & Dinosaur Parks, Game Zones",
     description:
       "Theme parks, water parks, dino and adventure attractions, arcades and VR zones — turnkey concepts built for the next generation of visitors.",
-    image: "/images/water-park.jpg",
+    video: "/videos/amusement-3s.mp4",
   },
   {
     title: "Lighting, Festival, Party & Seasonal Products",
     description:
       "Decorative, stage and festival lighting plus seasonal and celebration products — moving at scale across fast-growing markets.",
-    image: "/images/festive-lights.jpg",
+    video: "/videos/lighting-3s.mp4",
   },
   {
     title: "Sports, Tents & Outdoor",
     description:
       "Playground, fitness, camping and glamping gear, and event tents — built for active, outdoor experiences.",
-    image: "/images/camping-tents.jpg",
+    video: "/videos/sports-3s.mp4",
   },
   {
     title: "Food & Beverage Setups",
     description:
       "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
-    image: "/images/food-kiosk.jpg",
+    video: "/videos/food-3s.mp4",
   },
   {
     title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
     description:
       "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets. Connecting screens and stages worldwide.",
-    image: "/images/festival-crowd.jpg",
+    video: "/videos/cinema-3s.mp4",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function Home() {
             poster="/images/hero-ferris-wheel.jpg"
             className="h-full w-full object-cover"
           >
-            <source src="/videos/hero-joy.mp4" type="video/mp4" />
+            <source src="/videos/hero-combined-15s.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -207,14 +207,17 @@ export default function Home() {
                   index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                {opportunity.image && (
+                {opportunity.video && (
                   <div className="relative h-52 w-full overflow-hidden">
-                    <Image
-                      src={opportunity.image}
-                      alt={opportunity.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    >
+                      <source src={opportunity.video} type="video/mp4" />
+                    </video>
                   </div>
                 )}
                 <div className="p-8">
@@ -234,14 +237,17 @@ export default function Home() {
                 key={opportunity.title}
                 className="group h-full bg-white transition-colors hover:bg-sand"
               >
-                {opportunity.image && (
+                {opportunity.video && (
                   <div className="relative h-52 w-full overflow-hidden">
-                    <Image
-                      src={opportunity.image}
-                      alt={opportunity.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    >
+                      <source src={opportunity.video} type="video/mp4" />
+                    </video>
                   </div>
                 )}
                 <div className="p-8">
