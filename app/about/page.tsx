@@ -70,6 +70,26 @@ export default function About() {
         </div>
       </section>
 
+      {/* Who We Are */}
+      <section className="mx-auto max-w-4xl px-6 py-28 text-center lg:px-10">
+        <Reveal>
+          <p className="eyebrow">Who We Are</p>
+          <p className="mt-8 text-base leading-relaxed text-ink-soft sm:text-lg">
+            E7 Entertainments is the leisure and lifestyle venture of an
+            established{" "}
+            <strong className="font-bold text-ink">
+              multinational business group
+            </strong>
+            , backed by{" "}
+            <strong className="font-bold text-ink">
+              E7Tex Limited (Hong Kong)
+            </strong>
+            , with group companies and partner networks operating
+            internationally.
+          </p>
+        </Reveal>
+      </section>
+
       {/* Services */}
       <section className="bg-sand py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
