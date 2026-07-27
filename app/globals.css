@@ -52,14 +52,16 @@ body {
 }
 
 /* Miral pairs Montserrat headings with Open Sans body copy. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-display), var(--font-sans), sans-serif;
-  color: var(--ink);
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    color: var(--ink);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -71,22 +71,29 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="mx-auto max-w-4xl px-6 py-28 text-center lg:px-10">
-        <Reveal>
-          <p className="eyebrow">Who We Are</p>
-          <p className="mt-8 text-base leading-relaxed text-ink-soft sm:text-lg">
-            E7 Entertainments is the leisure and lifestyle venture of an
-            established{" "}
-            <strong className="font-bold text-ink">
-              multinational business group
-            </strong>
-            , backed by{" "}
-            <strong className="font-bold text-ink">
-              E7Tex Limited (Hong Kong)
-            </strong>
-            , with group companies and partner networks operating
-            internationally.
-          </p>
+      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
+        <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="eyebrow">Who We Are</p>
+            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              One group, built for global reach
+            </h2>
+          </div>
+          <div className="text-base leading-relaxed text-ink-soft sm:text-lg">
+            <p>
+              E7 Entertainments is the leisure and lifestyle venture of an
+              established{" "}
+              <strong className="font-bold text-ink">
+                multinational business group
+              </strong>
+              , backed by{" "}
+              <strong className="font-bold text-ink">
+                E7Tex Limited (Hong Kong)
+              </strong>
+              , with group companies and partner networks operating
+              internationally.
+            </p>
+          </div>
         </Reveal>
       </section>
 
@@ -100,33 +107,64 @@ export default function About() {
             </h2>
           </Reveal>
 
-          <StaggerGroup className="mt-16 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <StaggerItem
-                key={service.title}
-                className="group h-full bg-white transition-colors hover:bg-sand"
-              >
-                {service.image && (
-                  <div className="relative h-52 w-full overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+          <div className="mt-16 space-y-px">
+            <StaggerGroup className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+              {services.slice(0, 3).map((service, index) => (
+                <StaggerItem
+                  key={service.title}
+                  className={`group h-full bg-white transition-colors hover:bg-sand ${
+                    index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
+                  }`}
+                >
+                  {service.image && (
+                    <div className="relative h-52 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="p-8">
+                    <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-relaxed text-muted">
+                      {service.description}
+                    </p>
                   </div>
-                )}
-                <div className="p-8">
-                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-                    {service.title}
-                  </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-muted">
-                    {service.description}
-                  </p>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
+            <StaggerGroup className="grid gap-px bg-line sm:grid-cols-2 lg:mx-auto lg:w-2/3 lg:grid-cols-2">
+              {services.slice(3).map((service) => (
+                <StaggerItem
+                  key={service.title}
+                  className="group h-full bg-white transition-colors hover:bg-sand"
+                >
+                  {service.image && (
+                    <div className="relative h-52 w-full overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="p-8">
+                    <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-relaxed text-muted">
+                      {service.description}
+                    </p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
+          </div>
         </div>
       </section>
 
