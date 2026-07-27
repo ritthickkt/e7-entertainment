@@ -1,32 +1,20 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const offices = [
   {
-    label: "Registered Office — Hong Kong",
+    label: "Head Office — Hong Kong",
     address:
       "Flat 721, 7/F, LIVEN HOUSE, No. 61–63 King Yip Street, Kwun Tong, Kowloon, Hong Kong",
   },
   {
-    label: "India Office — Chennai",
-    address: "No 5, Valmeeki Street, Devinagar, Chennai 600109",
+    label: "Service Centre — India",
+    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
   },
   {
-    label: "India Office — Tiruppur",
+    label: "Representative Office — China",
     address:
-      "OXF Global India Private Limited, 9/1 Bungalow Street Extension, Tiruppur - 641602. GST: 33AADCO3823F1ZT",
+      "Room 2102, 21st Floor, Guomao Building, Keqiao District, Shaoxing City.",
   },
-  {
-    label: "China Representative Office — Yiwu",
-    address:
-      "1F020-046, Jinfu Yuan Parking Building, Chouzhou North Road, Choucheng Street, Yiwu City, Jinhua City, Zhejiang Province, China",
-  },
-];
-
-const quickLinks = [
-  { href: "/about", label: "About Us" },
-  { href: "/#opportunities", label: "Services" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteFooter() {
@@ -54,32 +42,12 @@ export function SiteFooter() {
               The entertainment, leisure and lifestyle venture of an
               established multinational business group.
             </p>
-
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-white/70 transition-colors hover:text-gold"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href="mailto:partners@e7entertainments.com"
-              className="mt-8 inline-block text-sm text-white/80 transition-colors hover:text-gold"
-            >
-              partners@e7entertainments.com
-            </a>
           </div>
 
           {/* Offices */}
           <div>
             <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
-              Our Offices
+              Our Address
             </p>
             <div className="mt-8 grid gap-8 sm:grid-cols-2">
               {offices.map((office) => (
