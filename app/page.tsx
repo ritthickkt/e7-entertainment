@@ -271,33 +271,64 @@ export default function Home() {
           </p>
         </Reveal>
 
-        <StaggerGroup className="mt-16 grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
-          {opportunities.map((opportunity) => (
-            <StaggerItem
-              key={opportunity.title}
-              className="group h-full bg-white transition-colors hover:bg-sand"
-            >
-              {opportunity.image && (
-                <div className="relative h-52 w-full overflow-hidden">
-                  <Image
-                    src={opportunity.image}
-                    alt={opportunity.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
+        <div className="mt-16 space-y-px">
+          <StaggerGroup className="grid gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+            {opportunities.slice(0, 3).map((opportunity, index) => (
+              <StaggerItem
+                key={opportunity.title}
+                className={`group h-full bg-white transition-colors hover:bg-sand ${
+                  index === 2 ? "sm:col-span-2 lg:col-span-1" : ""
+                }`}
+              >
+                {opportunity.image && (
+                  <div className="relative h-52 w-full overflow-hidden">
+                    <Image
+                      src={opportunity.image}
+                      alt={opportunity.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-8">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                    {opportunity.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted">
+                    {opportunity.description}
+                  </p>
                 </div>
-              )}
-              <div className="p-8">
-                <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
-                  {opportunity.title}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  {opportunity.description}
-                </p>
-              </div>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+          <StaggerGroup className="grid gap-px bg-line sm:grid-cols-2 lg:mx-auto lg:w-2/3 lg:grid-cols-2">
+            {opportunities.slice(3).map((opportunity) => (
+              <StaggerItem
+                key={opportunity.title}
+                className="group h-full bg-white transition-colors hover:bg-sand"
+              >
+                {opportunity.image && (
+                  <div className="relative h-52 w-full overflow-hidden">
+                    <Image
+                      src={opportunity.image}
+                      alt={opportunity.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-8">
+                  <h3 className="font-display text-lg font-semibold tracking-tight text-ink">
+                    {opportunity.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-muted">
+                    {opportunity.description}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+        </div>
       </section>
 
       {/* Process */}
