@@ -85,27 +85,6 @@ const inMotion = [
   },
 ];
 
-const process = [
-  {
-    step: "01",
-    title: "Connect",
-    description:
-      "Share your vision, land, market or capability — we'll explore where it fits.",
-  },
-  {
-    step: "02",
-    title: "Co-Create",
-    description:
-      "We bring the sourcing, execution and delivery network to shape a business plan together.",
-  },
-  {
-    step: "03",
-    title: "Launch",
-    description:
-      "From first deal to ongoing operations — we stay in the business with you, not just at the handoff.",
-  },
-];
-
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-white text-ink">
@@ -333,58 +312,6 @@ export default function Home() {
             ))}
           </StaggerGroup>
         </div>
-      </section>
-
-      {/* Process */}
-      <section className="bg-sand py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <Reveal className="max-w-2xl">
-            <p className="eyebrow">How It Works</p>
-            <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-              From conversation to launch
-            </h2>
-          </Reveal>
-
-          <StaggerGroup className="mt-16 grid gap-10 sm:grid-cols-3">
-            {process.map((step) => (
-              <StaggerItem
-                key={step.step}
-                className="border-t-2 border-gold bg-white p-8"
-              >
-                <span className="font-display text-4xl font-bold text-gold">
-                  {step.step}
-                </span>
-                <h3 className="mt-6 font-display text-lg font-semibold uppercase tracking-[0.12em] text-ink">
-                  {step.title}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-muted">
-                  {step.description}
-                </p>
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-4xl px-6 py-28 text-center lg:px-10">
-        <Reveal>
-          <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            Let&apos;s build something people remember.
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
-            If you have land, a market, a network, or just an idea worth
-            building — we want to hear from you.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link href="/contact#partner" className="btn btn-solid">
-              Become a Partner
-            </Link>
-            <Link href="/contact" className="btn btn-outline">
-              Contact Us
-            </Link>
-          </div>
-        </Reveal>
       </section>
 
       <SiteFooter />
