@@ -32,7 +32,7 @@ const services = [
   {
     title: "Food & Beverage Setups",
     description:
-      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés.",
+      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
     image: "/images/food-kiosk.jpg",
   },
   {

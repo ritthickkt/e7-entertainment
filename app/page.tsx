@@ -51,13 +51,13 @@ const opportunities = [
   {
     title: "Food & Beverage Setups",
     description:
-      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés.",
+      "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
     image: "/images/food-kiosk.jpg",
   },
   {
     title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
     description:
-      "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets.",
+      "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets. Connecting screens and stages worldwide.",
     image: "/images/festival-crowd.jpg",
   },
 ];
