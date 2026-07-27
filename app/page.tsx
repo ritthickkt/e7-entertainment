@@ -62,29 +62,6 @@ const opportunities = [
   },
 ];
 
-const inMotion = [
-  {
-    title: "Amusement Parks & Game Zones",
-    video: "/videos/amusement-gamezone.mp4",
-  },
-  {
-    title: "Lighting, Festivals & Parties",
-    video: "/videos/festival-lighting.mp4",
-  },
-  {
-    title: "Sports, Tents & Outdoor",
-    video: "/videos/sports-outdoor.mp4",
-  },
-  {
-    title: "Food & Beverage",
-    video: "/videos/food-beverage.mp4",
-  },
-  {
-    title: "Cinema, Events & Culture",
-    video: "/videos/cinema-culture.mp4",
-  },
-];
-
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col bg-white text-ink">
@@ -207,39 +184,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
-      {/* In Motion */}
-      <section className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
-        <Reveal className="max-w-2xl">
-          <p className="eyebrow">Experience It</p>
-          <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-            Our world, in motion
-          </h2>
-        </Reveal>
-
-        <StaggerGroup className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {inMotion.map((clip) => (
-            <StaggerItem
-              key={clip.title}
-              className="group relative h-72 overflow-hidden bg-ink"
-            >
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              >
-                <source src={clip.video} type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
-              <p className="absolute bottom-6 left-6 font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
-                {clip.title}
-              </p>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-      </section>
 
       {/* Opportunities */}
       <section id="opportunities" className="mx-auto max-w-7xl px-6 py-28 lg:px-10">
