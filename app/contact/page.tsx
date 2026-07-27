@@ -10,23 +10,18 @@ export const metadata = {
 
 const offices = [
   {
-    label: "Registered Office — Hong Kong",
+    label: "Head Office — Hong Kong",
     address:
       "Flat 721, 7/F, LIVEN HOUSE, No. 61–63 King Yip Street, Kwun Tong, Kowloon, Hong Kong",
   },
   {
-    label: "India Office — Chennai",
-    address: "No 5, Valmeeki Street, Devinagar, Chennai 600109",
+    label: "Service Centre — India",
+    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
   },
   {
-    label: "India Office — Tiruppur",
+    label: "Representative Office — China",
     address:
-      "OXF Global India Private Limited, 9/1 Bungalow Street Extension, Tiruppur - 641602. GST: 33AADCO3823F1ZT",
-  },
-  {
-    label: "China Representative Office — Yiwu",
-    address:
-      "1F020-046, Jinfu Yuan Parking Building, Chouzhou North Road, Choucheng Street, Yiwu City, Jinhua City, Zhejiang Province, China",
+      "Room 2102, 21st Floor, Guomao Building, Keqiao District, Shaoxing City.",
   },
 ];
 
@@ -134,7 +129,7 @@ export default function Contact() {
             Where to find us
           </h2>
 
-          <div className="mt-16 grid gap-px bg-line sm:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-line sm:grid-cols-3">
             {offices.map((office) => (
               <div key={office.label} className="bg-sand p-8">
                 <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-ink">
