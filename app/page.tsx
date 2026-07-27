@@ -22,12 +22,11 @@ const item: Variants = {
 };
 
 const buzzwords = [
-  "AMUSEMENT PARKS",
-  "GAME ZONES",
-  "CINEMAS",
-  "LIVE EVENTS",
-  "FESTIVALS",
-  "EXPERIENCES",
+  "PARKS & GAMES",
+  "FESTIVALS & LIGHTS",
+  "SPORTS & OUTDOOR",
+  "FOOD & BEVERAGE",
+  "CINEMA & EVENTS",
 ];
 
 const opportunities = [
