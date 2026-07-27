@@ -151,7 +151,7 @@ export default function Home() {
             <Link href="/contact" className="btn btn-solid">
               Start Your Project
             </Link>
-            <Link href="/contact" className="btn btn-ghost-light">
+            <Link href="/contact#partner" className="btn btn-ghost-light">
               Become a Partner
             </Link>
           </motion.div>
@@ -377,12 +377,9 @@ export default function Home() {
             building — we want to hear from you.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="mailto:partners@e7entertainments.com"
-              className="btn btn-solid"
-            >
+            <Link href="/contact#partner" className="btn btn-solid">
               Become a Partner
-            </a>
+            </Link>
             <Link href="/contact" className="btn btn-outline">
               Contact Us
             </Link>

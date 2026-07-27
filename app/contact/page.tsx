@@ -1,5 +1,6 @@
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
+import { MailtoForm } from "../components/MailtoForm";
 
 export const metadata = {
   title: "Contact — E7 Entertainments Group",
@@ -49,30 +50,84 @@ export default function Contact() {
               explore where it fits and build it with you.
             </p>
             <div className="mt-10 border-t-2 border-gold bg-sand p-8">
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold-ink">
-                Email
-              </p>
+              <MailtoForm
+                to="partners@e7entertainments.com"
+                subject="Contact Form Submission — E7 Entertainments"
+                submitLabel="Send Message"
+                fields={[
+                  { name: "name", label: "Name", required: true },
+                  {
+                    name: "email",
+                    label: "Email",
+                    type: "email",
+                    required: true,
+                  },
+                  {
+                    name: "message",
+                    label: "Message",
+                    textarea: true,
+                    required: true,
+                  },
+                ]}
+              />
+            </div>
+            <p className="mt-6 text-sm text-muted">
+              Prefer email?{" "}
               <a
                 href="mailto:partners@e7entertainments.com"
-                className="mt-3 inline-block font-display text-lg font-semibold tracking-tight text-gold transition-colors hover:text-ink"
+                className="text-gold-ink hover:text-ink"
               >
                 partners@e7entertainments.com
               </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Become a Partner */}
+      <section id="partner" className="bg-sand py-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="eyebrow">Partner With Us</p>
+              <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+                Become a Partner
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-ink-soft">
+                If you have land, a market, a network, or capability worth
+                building on, tell us about it — we bring the sourcing,
+                execution and delivery network.
+              </p>
             </div>
-            <div className="mt-10">
-              <a
-                href="mailto:partners@e7entertainments.com"
-                className="btn btn-solid"
-              >
-                Email Us
-              </a>
+            <div className="border-t-2 border-gold bg-white p-8">
+              <MailtoForm
+                to="partners@e7entertainments.com"
+                subject="Partnership Inquiry — E7 Entertainments"
+                submitLabel="Submit Inquiry"
+                fields={[
+                  { name: "name", label: "Name", required: true },
+                  { name: "company", label: "Company / Organisation" },
+                  {
+                    name: "email",
+                    label: "Email",
+                    type: "email",
+                    required: true,
+                  },
+                  {
+                    name: "message",
+                    label: "Tell us about your land, market or vision",
+                    textarea: true,
+                    required: true,
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Offices */}
-      <section className="bg-sand py-28">
+      <section className="bg-white py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <p className="eyebrow">Our Offices</p>
           <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
@@ -81,7 +136,7 @@ export default function Contact() {
 
           <div className="mt-16 grid gap-px bg-line sm:grid-cols-2">
             {offices.map((office) => (
-              <div key={office.label} className="bg-white p-8">
+              <div key={office.label} className="bg-sand p-8">
                 <p className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-ink">
                   {office.label}
                 </p>

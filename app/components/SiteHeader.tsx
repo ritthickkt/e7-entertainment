@@ -41,12 +41,9 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <a
-            href="mailto:partners@e7entertainments.com"
-            className="btn btn-solid !px-6 !py-3"
-          >
+          <Link href="/contact#partner" className="btn btn-solid !px-6 !py-3">
             Become a Partner
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
