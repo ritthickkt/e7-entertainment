@@ -7,13 +7,13 @@ const offices = [
       "Flat 721, 7/F, LIVEN HOUSE, No. 61–63 King Yip Street, Kwun Tong, Kowloon, Hong Kong",
   },
   {
-    label: "Service Centre — India",
-    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
-  },
-  {
     label: "Representative Office — China",
     address:
-      "Room 2102, 21st Floor, Guomao Building, Keqiao District, Shaoxing City.",
+      "Room 2102, 21st Floor, Guomao Building, Keqiao District, Shaoxing City.",
+  },
+  {
+    label: "Service Centre — India",
+    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
   },
 ];
 
@@ -25,12 +25,12 @@ export function SiteFooter() {
           {/* Brand + quick links */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-12 w-12 items-center justify-center rounded-md bg-white p-1.5">
+              <span className="flex h-20 w-20 items-center justify-center rounded-md bg-white p-2.5">
                 <Image
                   src="/images/logo.png"
                   alt="E7 Entertainments"
-                  width={48}
-                  height={51}
+                  width={84}
+                  height={90}
                   className="h-full w-auto"
                 />
               </span>
@@ -49,10 +49,10 @@ export function SiteFooter() {
             <p className="font-display text-xs font-semibold uppercase tracking-[0.28em] text-gold">
               Our Address
             </p>
-            <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            <div className="mt-8 grid gap-6 sm:grid-cols-[1.12fr_1.35fr_1fr]">
               {offices.map((office) => (
                 <div key={office.label}>
-                  <p className="font-display text-xs font-semibold uppercase tracking-[0.14em] text-white">
+                  <p className="font-display text-xs font-semibold uppercase tracking-[0.10em] text-white">
                     {office.label}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-white/55">

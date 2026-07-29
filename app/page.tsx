@@ -34,31 +34,31 @@ const opportunities = [
     title: "Amusement & Dinosaur Parks, Game Zones",
     description:
       "Theme parks, water parks, dino and adventure attractions, arcades and VR zones — turnkey concepts built for the next generation of visitors.",
-    video: "/videos/amusement-3s.mp4",
+    video: "/videos/amusement-ai-3s-clean.mp4",
   },
   {
     title: "Lighting, Festival, Party & Seasonal Products",
     description:
       "Decorative, stage and festival lighting plus seasonal and celebration products — moving at scale across fast-growing markets.",
-    video: "/videos/lighting-3s.mp4",
+    video: "/videos/lighting-ai-3s-clean.mp4",
   },
   {
     title: "Sports, Tents & Outdoor",
     description:
       "Playground, fitness, camping and glamping gear, and event tents — built for active, outdoor experiences.",
-    video: "/videos/sports-3s.mp4",
+    video: "/videos/sports-ai-3s-clean.mp4",
   },
   {
     title: "Food & Beverage Setups",
     description:
       "Food courts, kiosks, food trucks and commercial kitchen equipment for parks, malls and cafés. From layout to daily operations, we deliver ready-to-run setups built for high footfall.",
-    video: "/videos/food-3s.mp4",
+    video: "/videos/food-ai-3s-clean.mp4",
   },
   {
     title: "Movies, Content & OTT, Cinema, Events & Media, Cultural Exchange",
     description:
       "Cinema and live events, film and content distribution, and cultural exchange programs that turn moments into memories and bridge markets. Connecting screens and stages worldwide.",
-    video: "/videos/cinema-3s.mp4",
+    video: "/videos/cinema-ai-3s-clean.mp4",
   },
 ];
 
@@ -156,9 +156,9 @@ export default function Home() {
               <Image
                 src="/images/chairman.png"
                 alt="Manimaran, Founder & Chairman, E7 Entertainments Group"
-                width={132}
-                height={132}
-                className="h-32 w-32 rounded-full object-cover"
+                width={264}
+                height={264}
+                className="h-64 w-64 rounded-full object-cover"
               />
               <div>
                 <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-ink">

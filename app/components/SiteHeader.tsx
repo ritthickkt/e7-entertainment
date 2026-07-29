@@ -18,9 +18,9 @@ export function SiteHeader() {
           <Image
             src="/images/logo.png"
             alt="E7 Entertainments"
-            width={48}
-            height={51}
-            className="h-12 w-auto"
+            width={84}
+            height={90}
+            className="h-[4.5rem] w-auto"
             priority
           />
           <span className="font-display text-base font-semibold uppercase tracking-[0.16em] text-ink">

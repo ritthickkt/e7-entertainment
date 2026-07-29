@@ -15,13 +15,13 @@ const offices = [
       "Flat 721, 7/F, LIVEN HOUSE, No. 61–63 King Yip Street, Kwun Tong, Kowloon, Hong Kong",
   },
   {
-    label: "Service Centre — India",
-    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
-  },
-  {
     label: "Representative Office — China",
     address:
       "Room 2102, 21st Floor, Guomao Building, Keqiao District, Shaoxing City.",
+  },
+  {
+    label: "Service Centre — India",
+    address: "9/1 Bungalow Street Extension, Tiruppur - 641602.",
   },
 ];
 
@@ -124,7 +124,7 @@ export default function Contact() {
       {/* Offices */}
       <section className="bg-white py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow">Our Offices</p>
+          <p className="eyebrow">Our Address</p>
           <h2 className="rule-gold mt-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
             Where to find us
           </h2>
