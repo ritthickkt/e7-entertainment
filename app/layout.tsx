@@ -4,6 +4,7 @@ import { WhatsAppButton } from "./components/WhatsAppButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.e7entertainments.com"),
   title: "E7 Entertainments Group",
   description:
     "E7 Entertainments — entertainment, leisure and lifestyle venture delivering amusement parks, game zones, cinemas, festival trade and government projects across Asia, Africa, the Middle East and Europe.",
