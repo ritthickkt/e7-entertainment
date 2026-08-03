@@ -46,7 +46,7 @@ export default function Contact() {
             </p>
             <div className="mt-10 border-t-2 border-gold bg-sand p-8">
               <MailtoForm
-                to="partners@e7entertainments.com"
+                to="support@e7entertainments.com"
                 subject="Contact Form Submission — E7 Entertainments"
                 submitLabel="Send Message"
                 fields={[
@@ -69,10 +69,10 @@ export default function Contact() {
             <p className="mt-6 text-sm text-muted">
               Prefer email?{" "}
               <a
-                href="mailto:partners@e7entertainments.com"
+                href="mailto:support@e7entertainments.com"
                 className="text-gold-ink hover:text-ink"
               >
-                partners@e7entertainments.com
+                support@e7entertainments.com
               </a>
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function Contact() {
             </div>
             <div className="border-t-2 border-gold bg-white p-8">
               <MailtoForm
-                to="partners@e7entertainments.com"
+                to="support@e7entertainments.com"
                 subject="Partnership Inquiry — E7 Entertainments"
                 submitLabel="Submit Inquiry"
                 fields={[

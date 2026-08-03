@@ -194,7 +194,7 @@ export default function About() {
               Start Your Project
             </Link>
             <a
-              href="mailto:partners@e7entertainments.com"
+              href="mailto:support@e7entertainments.com"
               className="btn btn-outline"
             >
               Email Us

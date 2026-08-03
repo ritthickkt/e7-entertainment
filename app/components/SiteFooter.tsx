@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SocialLinks } from "./SocialLinks";
 
 const offices = [
   {
@@ -42,6 +43,9 @@ export function SiteFooter() {
               The entertainment, leisure and lifestyle venture of an
               established multinational business group.
             </p>
+            <div className="mt-6">
+              <SocialLinks />
+            </div>
           </div>
 
           {/* Offices */}
