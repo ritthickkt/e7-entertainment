@@ -1,50 +1,92 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About Us" },
-  { href: "/#opportunities", label: "Services" },
-  { href: "/news", label: "News" },
-  { href: "/careers", label: "Careers" },
-  { href: "/contact", label: "Contact Us" },
-];
+import { ProductsDropdown } from "./ProductsDropdown";
 
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
-        <Link href="/" className="flex items-center gap-3">
+      <div className="flex items-center px-4 py-4 lg:px-6">
+        {/* Logo & Brand - flush left */}
+        <Link href="/" className="flex items-center gap-1.5 shrink-0">
           <Image
             src="/images/logo.png"
             alt="E7 Entertainments"
             width={84}
             height={90}
-            className="h-[4.5rem] w-auto"
+            className="h-12 w-auto"
             priority
           />
-          <span className="font-display text-base font-semibold uppercase tracking-[0.16em] text-ink">
+          <span className="font-display text-xs font-semibold uppercase tracking-[0.12em] text-ink whitespace-nowrap lg:text-sm">
             E7 Entertainments
           </span>
         </Link>
 
-        <nav className="flex items-center gap-8">
-          <ul className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="font-display text-xs font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:text-gold"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+        {/* Navigation - spreads across full width */}
+        <nav className="ml-12 flex flex-1 items-center">
+          <ul className="hidden items-center lg:flex flex-1">
+            <li className="shrink-0">
+              <Link
+                href="/"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="shrink-0">
+              <Link
+                href="/about"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                About Us
+              </Link>
+            </li>
+            <li className="shrink-0 px-6">
+              <ProductsDropdown />
+            </li>
+            <li className="shrink-0">
+              <Link
+                href="/#opportunities"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                Services
+              </Link>
+            </li>
+            <li className="shrink-0">
+              <Link
+                href="/news"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                News
+              </Link>
+            </li>
+            <li className="shrink-0">
+              <Link
+                href="/careers"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                Careers
+              </Link>
+            </li>
+            <li className="shrink-0">
+              <Link
+                href="/contact"
+                className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:text-gold px-6 xl:tracking-[0.16em]"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
-          <Link href="/contact#partner" className="btn btn-solid !px-6 !py-3">
+        </nav>
+
+        {/* CTA Button - flush right */}
+        <div className="ml-auto shrink-0">
+          <Link
+            href="/contact#partner"
+            className="btn btn-solid !px-5 !py-3 whitespace-nowrap text-xs"
+          >
             Become a Partner
           </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );
