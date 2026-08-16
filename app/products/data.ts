@@ -17,6 +17,7 @@ export type Product = {
   subcategorySlug: string;
   categorySlug: string;
   name: string;
+  image?: string;
 };
 
 export const productCategories: ProductCategory[] = [
@@ -237,6 +238,12 @@ export const products: Product[] = [
   { slug: "gallimimus", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Gallimimus" },
   { slug: "psittacosaurus", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Psittacosaurus" },
   { slug: "maiasaura", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Maiasaura" },
+
+  // Amusement Rides
+  { slug: "ferris-wheel-style", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Ferris Wheel Style", image: "/products/amusement-dinosaur-parks/amusement-rides/ferris-wheel-style.jpg" },
+  { slug: "royal-carousel", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Royal Carousel", image: "/products/amusement-dinosaur-parks/amusement-rides/royal-carousel.jpg" },
+  { slug: "swing-chair-carousel", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Swing Chair Carousel", image: "/products/amusement-dinosaur-parks/amusement-rides/swing-chair-carousel.jpg" },
+  { slug: "train-thrill", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Train Thrill", image: "/products/amusement-dinosaur-parks/amusement-rides/train-thrill.jpg" },
 ];
 
 export function getProductCategory(slug: string) {

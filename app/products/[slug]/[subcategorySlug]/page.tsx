@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Reveal } from "../../../components/Reveal";
 import { SiteHeader } from "../../../components/SiteHeader";
@@ -121,19 +122,36 @@ export default async function SubcategoryPage({
                   <p className="mb-8 text-sm font-semibold text-muted">
                     {products.length} product{products.length !== 1 ? "s" : ""} available
                   </p>
-                  <div className="space-y-3">
+                  <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {products.map((product) => (
                       <Link
                         key={product.slug}
                         href={`/products/${category.slug}/${subcategory.slug}/${product.slug}`}
-                        className="block rounded border border-line p-6 transition-all hover:border-gold hover:bg-sand"
+                        className="group block overflow-hidden rounded border border-line transition-all hover:border-gold hover:shadow-md"
                       >
-                        <h3 className="font-display text-lg font-semibold text-ink">
-                          {product.name}
-                        </h3>
-                        <span className="mt-2 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold">
-                          View Details →
-                        </span>
+                        <div className="relative aspect-square w-full overflow-hidden bg-sand">
+                          {product.image ? (
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
+                          ) : (
+                            <div className="flex h-full items-center justify-center text-xs font-medium text-muted">
+                              Image coming soon
+                            </div>
+                          )}
+                        </div>
+                        <div className="p-5">
+                          <h3 className="font-display text-base font-semibold text-ink">
+                            {product.name}
+                          </h3>
+                          <span className="mt-2 inline-block font-display text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                            View Details →
+                          </span>
+                        </div>
                       </Link>
                     ))}
                   </div>
