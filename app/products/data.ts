@@ -17,6 +17,7 @@ export type Product = {
   subcategorySlug: string;
   categorySlug: string;
   name: string;
+  image?: string;
 };
 
 export const productCategories: ProductCategory[] = [
@@ -237,6 +238,58 @@ export const products: Product[] = [
   { slug: "gallimimus", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Gallimimus" },
   { slug: "psittacosaurus", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Psittacosaurus" },
   { slug: "maiasaura", subcategorySlug: "animatronic-dinosaurs", categorySlug: "amusement-dinosaur-parks", name: "Maiasaura" },
+
+  // Amusement Rides
+  { slug: "ferris-wheel-style", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Ferris Wheel Style", image: "/products/amusement-dinosaur-parks/amusement-rides/ferris-wheel-style.jpg" },
+  { slug: "royal-carousel", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Royal Carousel", image: "/products/amusement-dinosaur-parks/amusement-rides/royal-carousel.jpg" },
+  { slug: "swing-chair-carousel", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Swing Chair Carousel", image: "/products/amusement-dinosaur-parks/amusement-rides/swing-chair-carousel.jpg" },
+  { slug: "train-thrill", subcategorySlug: "amusement-rides", categorySlug: "amusement-dinosaur-parks", name: "Train Thrill", image: "/products/amusement-dinosaur-parks/amusement-rides/train-thrill.jpg" },
+
+  // Water Park Equipment
+  { slug: "big-horn-water-slide", subcategorySlug: "water-park-equipment", categorySlug: "amusement-dinosaur-parks", name: "Big Horn Water Slide", image: "/products/amusement-dinosaur-parks/water-park-equipment/big-horn-water-slide.jpg" },
+  { slug: "butterfly-water-spray", subcategorySlug: "water-park-equipment", categorySlug: "amusement-dinosaur-parks", name: "Butterfly Water Spray", image: "/products/amusement-dinosaur-parks/water-park-equipment/butterfly-water-spray.jpg" },
+  { slug: "giant-bowl-slide", subcategorySlug: "water-park-equipment", categorySlug: "amusement-dinosaur-parks", name: "Giant Bowl Slide", image: "/products/amusement-dinosaur-parks/water-park-equipment/giant-bowl-slide.jpg" },
+  { slug: "water-sprayer", subcategorySlug: "water-park-equipment", categorySlug: "amusement-dinosaur-parks", name: "Water Sprayer", image: "/products/amusement-dinosaur-parks/water-park-equipment/water-sprayer.jpg" },
+
+  // Indoor Playground & Soft Play
+  { slug: "indoor-climbing-wall", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Indoor Climbing Wall (FECs)", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/indoor-climbing-wall.jpg" },
+  { slug: "indoor-rope-adventure-course", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Indoor Rope Adventure Course", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/indoor-rope-adventure-course.jpg" },
+  { slug: "jungle-themed-indoor-playground", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Jungle-Themed Commercial Indoor Playground", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/jungle-themed-indoor-playground.jpg" },
+  { slug: "soft-play-maze", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Naughty Fort & Soft Play Maze", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/soft-play-maze.jpg" },
+  { slug: "kids-play-zone-system", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Kids Play Zone System", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/kids-play-zone-system.jpg" },
+  { slug: "modular-soft-play-climbing-structure", subcategorySlug: "indoor-playground-soft-play", categorySlug: "amusement-dinosaur-parks", name: "Modular Soft Play & Climbing Structure", image: "/products/amusement-dinosaur-parks/indoor-playground-soft-play/modular-soft-play-climbing-structure.jpg" },
+
+  // Stage, Sound & LED Walls
+  { slug: "interactive-led-pixel-wall", subcategorySlug: "stage-sound-led", categorySlug: "movies-ott-cinema", name: "Interactive LED Pixel Wall", image: "/products/movies-ott-cinema/stage-sound-led/interactive-led-pixel-wall.jpg" },
+  { slug: "interactive-pixel-wall", subcategorySlug: "stage-sound-led", categorySlug: "movies-ott-cinema", name: "Interactive Pixel Wall", image: "/products/movies-ott-cinema/stage-sound-led/interactive-pixel-wall.jpg" },
+  { slug: "led-pixel-wall", subcategorySlug: "stage-sound-led", categorySlug: "movies-ott-cinema", name: "LED Pixel Wall", image: "/products/movies-ott-cinema/stage-sound-led/led-pixel-wall.jpg" },
+
+  // Decorative & Landscape Lighting
+  { slug: "led-aurasphere-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Aurasphere Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-aurasphere-decorative.jpg" },
+  { slug: "led-butterfly-decorative-light", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Butterfly Decorative Light", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-butterfly-decorative-light.jpg" },
+  { slug: "led-butterfly-decorative-2", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Butterfly Decorative (Design 2)", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-butterfly-decorative-2.jpg" },
+  { slug: "led-cactus-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Cactus Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-cactus-decorative.jpg" },
+  { slug: "led-dragonfly-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Dragonfly Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-dragonfly-decorative.jpg" },
+  { slug: "led-egg-accent-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Egg Accent Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-egg-accent-decorative.jpg" },
+  { slug: "led-firefly-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Firefly Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-firefly-decorative.jpg" },
+  { slug: "led-frog-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Frog Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-frog-decorative.jpg" },
+  { slug: "led-golden-butterfly-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Golden Butterfly Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-golden-butterfly-decorative.jpg" },
+  { slug: "led-grasshopper-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Grasshopper Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-grasshopper-decorative.jpg" },
+  { slug: "led-honeybee-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Honeybee Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-honeybee-decorative.jpg" },
+  { slug: "led-ladybug-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Ladybug Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-ladybug-decorative.jpg" },
+  { slug: "led-nightstand-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Nightstand Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-nightstand-decorative.jpg" },
+  { slug: "led-parrot-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Parrot Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-parrot-decorative.jpg" },
+  { slug: "led-wolf-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Wolf Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-wolf-decorative.jpg" },
+  { slug: "led-zenith-gradient-decorative", subcategorySlug: "decorative-landscape-lighting", categorySlug: "lighting-festival-party", name: "LED Zenith Gradient Decorative", image: "/products/lighting-festival-party/decorative-landscape-lighting/led-zenith-gradient-decorative.jpg" },
+
+  // Sports Goods & Equipment
+  { slug: "funny-carnival-kids", subcategorySlug: "sports-goods", categorySlug: "sports-tents-outdoor", name: "Funny Carnival Kids", image: "/products/sports-tents-outdoor/sports-goods/funny-carnival-kids.jpg" },
+  { slug: "mech-shooter", subcategorySlug: "sports-goods", categorySlug: "sports-tents-outdoor", name: "Mech Shooter", image: "/products/sports-tents-outdoor/sports-goods/mech-shooter.jpg" },
+  { slug: "star-origin-hockey", subcategorySlug: "sports-goods", categorySlug: "sports-tents-outdoor", name: "Star Origin Hockey", image: "/products/sports-tents-outdoor/sports-goods/star-origin-hockey.jpg" },
+  { slug: "wild-island", subcategorySlug: "sports-goods", categorySlug: "sports-tents-outdoor", name: "Wild Island", image: "/products/sports-tents-outdoor/sports-goods/wild-island.jpg" },
+
+  // Outdoor Fitness & Gym Equipment
+  { slug: "outdoor-cross-trainer", subcategorySlug: "outdoor-fitness", categorySlug: "sports-tents-outdoor", name: "Outdoor Cross Trainer", image: "/products/sports-tents-outdoor/outdoor-fitness/outdoor-cross-trainer.jpg" },
 ];
 
 export function getProductCategory(slug: string) {

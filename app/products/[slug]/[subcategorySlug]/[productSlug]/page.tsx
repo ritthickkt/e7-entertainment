@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Reveal } from "../../../../components/Reveal";
 import { SiteHeader } from "../../../../components/SiteHeader";
@@ -81,18 +82,31 @@ export default async function ProductDetailPage({
       {/* Product detail */}
       <section className="mx-auto max-w-4xl px-6 py-28 lg:px-10">
         <Reveal>
-          <div className="rounded border border-line p-8 bg-sand">
-            <p className="text-ink-soft">
-              Product image and detailed specifications coming soon.
-            </p>
-            <p className="mt-4 text-sm text-muted">
-              We&apos;re working on adding complete product details and images.
-              <Link href="/contact" className="ml-1 text-gold underline">
-                Contact us
-              </Link>
-              {" "}for more information about this product.
-            </p>
-          </div>
+          {product.image ? (
+            <div className="relative aspect-square w-full overflow-hidden rounded border border-line bg-sand sm:aspect-[4/3]">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+          ) : (
+            <div className="rounded border border-line p-8 bg-sand">
+              <p className="text-ink-soft">
+                Product image and detailed specifications coming soon.
+              </p>
+              <p className="mt-4 text-sm text-muted">
+                We&apos;re working on adding complete product details and images.
+                <Link href="/contact" className="ml-1 text-gold underline">
+                  Contact us
+                </Link>
+                {" "}for more information about this product.
+              </p>
+            </div>
+          )}
 
           <div className="mt-12 flex flex-wrap items-center gap-4">
             <Link href="/contact" className="btn btn-solid">
