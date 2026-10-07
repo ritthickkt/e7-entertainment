@@ -141,35 +141,36 @@ export default function Home() {
 
       {/* Founder's Message */}
       <section className="bg-sand py-28">
-        <Reveal className="mx-auto max-w-4xl px-6 text-center lg:px-10">
-          <p className="eyebrow">Chairman&apos;s Message</p>
-          <blockquote className="mt-8">
-            <p className="font-display text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
-              &ldquo;Every great destination begins with one person&apos;s
-              dream. For over two decades, I have built international
-              businesses and delivered world-class projects across the globe.
-              E7 Entertainments stands on one simple belief: joy is the
-              world&apos;s greatest business. If you carry a dream, we will
-              build it together.&rdquo;
-            </p>
-            <footer className="mt-10 flex flex-col items-center gap-4">
-              <Image
-                src="/images/chairman.jpg"
-                alt="Manimaran, Founder & Chairman, E7 Entertainments Group"
-                width={264}
-                height={264}
-                className="h-64 w-64 rounded-full object-cover"
-              />
-              <div>
+        <Reveal className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-10">
+          <div>
+            <p className="eyebrow">Chairman&apos;s Message</p>
+            <blockquote className="mt-8">
+              <p className="font-display text-2xl font-medium leading-snug tracking-tight text-ink sm:text-3xl">
+                &ldquo;Every great destination begins with one person&apos;s
+                dream. For over two decades, I have built international
+                businesses and delivered world-class projects across the globe.
+                E7 Entertainments stands on one simple belief: joy is the
+                world&apos;s greatest business. If you carry a dream, we will
+                build it together.&rdquo;
+              </p>
+              <footer className="mt-10">
                 <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-ink">
                   Manimaran
                 </p>
                 <p className="mt-1 text-sm text-muted">
                   Founder &amp; Chairman, E7 Entertainments Group
                 </p>
-              </div>
-            </footer>
-          </blockquote>
+              </footer>
+            </blockquote>
+          </div>
+          <Image
+            src="/images/chairman.jpg"
+            alt="Manimaran, Founder & Chairman, E7 Entertainments Group"
+            width={1122}
+            height={1402}
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="mx-auto h-auto w-full max-w-md rounded-2xl shadow-lg lg:max-w-none"
+          />
         </Reveal>
       </section>
 
