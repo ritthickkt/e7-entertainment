@@ -154,7 +154,7 @@ export default function Home() {
             </p>
             <footer className="mt-10 flex flex-col items-center gap-4">
               <Image
-                src="/images/chairman.png"
+                src="/images/chairman.jpg"
                 alt="Manimaran, Founder & Chairman, E7 Entertainments Group"
                 width={264}
                 height={264}
